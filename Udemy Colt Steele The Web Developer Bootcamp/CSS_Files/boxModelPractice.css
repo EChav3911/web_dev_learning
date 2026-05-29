@@ -1,0 +1,47 @@
+/* by setting the body's font size to 0, I have to set the font size for every element within due to inheritance, otherwise no text will show. */
+body {
+  margin: 0;
+  font-size: 0;
+}
+
+.ex1 {
+  display: inline-block;
+  font-size: 1rem;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  border: 5px solid black;
+}
+
+#box1 {
+  margin-right: 10px;
+}
+
+#box2 {
+  margin-left: 10px;
+}
+
+p {
+  margin: 0;
+}
+
+h2 {
+  font-size: 40px;
+  border: 1px solid black;
+  /* line-height is relative to the font size of the element it's on, not the parent. So a line height of 200% will be 80px, since the font-size of this element is 40px. Note the line-hieght adjusts the height of the container and not the font/text */
+  line-height: 200%;
+}
+
+#outside_box {
+  background-color: #a755c2;
+  width: 400px;
+  height: 400px;
+}
+
+#inside_box {
+  background-color: #d2a1b8;
+  /* notice the percentages of the widht and height are relative to the size of its parent element's width and hieght */
+  width: 50%;
+  height: 50%;
+}

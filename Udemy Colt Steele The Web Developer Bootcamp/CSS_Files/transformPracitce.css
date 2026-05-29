@@ -1,0 +1,55 @@
+h1 {
+  text-align: center;
+}
+
+h2 {
+  border: 2px solid black;
+  text-align: center;
+  width: 25%;
+  padding: 15px 25px;
+  margin: 20px auto;
+  background-color: #118ab2;
+}
+
+h2:nth-of-type(2n) {
+  background-color: #06d6a0;
+}
+h2:nth-of-type(3n) {
+  background-color: #ffd166;
+}
+h2:nth-of-type(4n) {
+  background-color: #ef476f;
+}
+
+div:first-of-type h2:nth-of-type(1) {
+  /* transform-origin: bottom left; */
+  transform: rotate(15deg);
+}
+div:first-of-type h2:nth-of-type(2) {
+  transform: scale(0.5);
+}
+
+/* Translate shifts the element along the x and/or y axis. Can also be used in a 3d space (z axis) */
+div:first-of-type h2:nth-of-type(3) {
+  transform: translateX(200px);
+}
+div:first-of-type h2:nth-of-type(4) {
+  transform: translate(-100px, -25px); /*shifts element along the x and y axis*/
+}
+div:nth-of-type(2) h2:nth-of-type(1) {
+  transform: skewX(30deg);
+}
+div:nth-of-type(2) h2:nth-of-type(2) {
+  transform: skew(30deg, 5deg); /*skews along the x and y axis*/
+}
+div:nth-of-type(2) h2:nth-of-type(3) {
+  transform: rotate(-20deg) scale(1.3) translateX(-80px);
+}
+div:nth-of-type(2) h2:nth-of-type(4) {
+  transform: rotate(180deg) scaleY(1.5) translateX(-400px);
+}
+
+/* Use transform on the whole div which contains 4 h2's */
+div:nth-of-type(2) {
+  transform: scale(0.6);
+}

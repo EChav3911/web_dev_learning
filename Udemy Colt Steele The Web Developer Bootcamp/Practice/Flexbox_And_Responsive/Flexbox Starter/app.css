@@ -1,0 +1,31 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+h1 {
+  text-align: center;
+}
+#container {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+  /* justify-content: space-evenly; */
+  /* flex-wrap: wrap; */
+  /* align-content: center; */
+  background-color: #003049;
+  width: 90%;
+  height: 1000px;
+  margin: 0 auto;
+  border: 5px solid #003049;
+}
+
+#container div {
+  /* flex-basis: 350px; */
+  /* width: 500px; */
+  height: 200px;
+  flex: 1 200px;
+}
+
+#container div:nth-child(3) {
+  flex-grow: 3;
+}

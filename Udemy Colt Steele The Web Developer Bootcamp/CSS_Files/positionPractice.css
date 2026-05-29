@@ -1,0 +1,51 @@
+div {
+  display: inline-block;
+  border: 2px solid black;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: #283618;
+}
+
+.middle_box {
+  background-color: #606c38;
+}
+
+/* notice the positioning of static doesn't change from where it's supposed to be */
+#static .middle_box {
+  position: static;
+  top: 100px;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+/* the relative position moves the element RELATIVE to where it's static position is supposed to be. So for example, adding 50px on top, pushes the element down 50px from its static position by adding 50 pixels above. */
+#relative .middle_box {
+  position: relative;
+  top: 50px;
+  left: 50px;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+/* The absolute position removes the element from it's statice position, and places it relative to its closest POSITIONED ancestor. If no ancestor has a set position, then the absolute element will position itself relative to the body. Notice how the third box takes its place. That's becasue the absolute box is no longer in its static position */
+#absolute .middle_box {
+  position: absolute;
+  top: 100px;
+  left: 600px;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+/* My understanding is that the fixed position is positioned relative to the body, and stays in place when scrolled.  Like the absolute position, the fixed position is taken out of its defualt static positin, so any containers after will fill in and take its space. */
+#fixed .middle_box {
+  position: fixed;
+  left: 50%;
+  top: 20%;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
