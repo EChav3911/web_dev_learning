@@ -1,0 +1,14 @@
+/* h1 {
+  color: blueviolet !important;
+} */
+
+h1.text-primary {
+  color: blueviolet;
+}
+
+h2 {
+  color: blueviolet;
+}
+
+/* Why does h2 change the color, but h1 doesn't?*/
+/* Because bootstrap has text-primary marked as !important, that's why. */
